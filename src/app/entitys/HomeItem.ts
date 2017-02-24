@@ -1,15 +1,15 @@
 /**
  * Created by Tristan on 17/2/18.
  */
-export class HomeItem{
-  title:string;
-  content:string;
-  id:string;
-  imgSrc:string;
-  post:number;
-  like:number;
-  time:Date;
-  active:Boolean;
+export class HomeItem {
+  title: string;
+  content: string;
+  id: string;
+  imgSrc: string;
+  post: number;
+  like: number;
+  time: Date;
+
   constructor(title: string, content: string, id: string, imgSrc: string, post: number, like: number, time: Date) {
     this.title = title;
     this.content = content;
@@ -19,6 +19,4 @@ export class HomeItem{
     this.like = like;
     this.time = time;
   }
-
-
 }

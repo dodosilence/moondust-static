@@ -1,10 +1,10 @@
-import { PicStaticPage } from './app.po';
+import { MoondustStaticPage } from './app.po';
 
-describe('pic-static App', function() {
-  let page: PicStaticPage;
+describe('moondust-static App', () => {
+  let page: MoondustStaticPage;
 
   beforeEach(() => {
-    page = new PicStaticPage();
+    page = new MoondustStaticPage();
   });
 
   it('should display message saying app works', () => {
