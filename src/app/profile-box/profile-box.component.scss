@@ -1,0 +1,10 @@
+@import "compass/css3";
+.head-ico {
+  padding: 0;
+  img {
+    cursor: pointer;
+    &:hover{
+      @include box-shadow(0px 0px 2px 1px rgba(0, 0, 0, 0.4));
+    }
+  }
+}

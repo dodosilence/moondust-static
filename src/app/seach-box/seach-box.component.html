@@ -1,0 +1,11 @@
+<li class="nav-item dropdown">
+  <a id="searchDowm">
+    <input class="form-control mr-sm-2 search_box" type="text" placeholder="Search" [(ngModel)]="keyWord"
+           (keyup)="queryKeyWord()" (blur)="resultCollapseHide=true" (focus)="queryKeyWord()"
+           (keydown.enter)="toSearchNavigation()">
+  </a>
+  <div class="dropdown-menu search_box_result" [collapse]="resultCollapseHide">
+    <a class="dropdown-item" *ngFor="let result of resultLists">{{result}}</a>
+  </div>
+</li>
+

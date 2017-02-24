@@ -1,0 +1,33 @@
+@import "compass/css3";
+.login-body {
+  position: fixed;
+  z-index: 1030;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 10rem;
+  width: auto;
+  max-width: 22rem;
+  .container {
+    background-color: white;
+    box-shadow: 0 0 1rem 0.09rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.2rem;
+    padding: 1rem 2rem;
+    .logo {
+      font-size: 3rem;
+    }
+    .find-pass {
+      cursor: pointer;
+    }
+  }
+}
+
+.login-modal-shadow {
+  position: fixed;
+  width: 100%;
+  z-index: 1029;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  cursor: pointer;
+}

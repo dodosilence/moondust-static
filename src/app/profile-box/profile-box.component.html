@@ -1,0 +1,23 @@
+<div [ngSwitch]="getProfile()">
+  <li class="nav-item dropdown pull-right" *ngSwitchDefault>
+    <a class="nav-link head-ico">
+      <img src="{{getProfile().headIco}}" class="rounded-circle" width="35" height="35" alt=""
+           (mouseenter)="profileItemsHide=false">
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" [collapse]="profileItemsHide" (mouseenter)="profileItemsHide=false"
+         (mouseleave)="profileItemsHide=true">
+      <a class="dropdown-item" href="javascript:history.go(-1);">Action</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" (click)="logout()">退出</a>
+    </div>
+  </li>
+  <li class="nav-item dropdown pull-right" *ngSwitchCase="null">
+    <a class="nav-link head-ico" (click)="showLoginModal(true)">
+      <img src="assets/img/profile.svg" class="rounded-circle" width="35" height="35">
+    </a>
+  </li>
+</div>
+
+<app-login-modal></app-login-modal>
+

@@ -1,0 +1,46 @@
+<div *ngIf="show()">
+  <div class="login-modal-shadow" (click)="hide()"></div>
+  <div class="login-body">
+    <div class="container" [@flyInOut]>
+      <div class="clearfix"></div>
+      <div class="col-12">
+        <div class="row">
+          <a class="col-12  text-center mb-4 logo">登录</a>
+        </div>
+        <div class="form-group row" [ngClass]="{'has-danger': loginBox.usernameErr}">
+          <input type="text" class="form-control text-center" id="username"
+                 [ngClass]="{'form-control-danger': loginBox.usernameErr}"
+                 (keyup)="validate()"
+                 [(ngModel)]="loginBox.username"
+                 placeholder="帐号"
+                 #username>
+        </div>
+        <div class="form-group row" [ngClass]="{'has-danger': loginBox.passwordErr}">
+          <input type="password" class="form-control text-center" id="password"
+                 [ngClass]="{'form-control-danger': loginBox.passwordErr}"
+                 (keyup)="validate()"
+                 [(ngModel)]="loginBox.password"
+                 placeholder="密码"
+                 #password>
+        </div>
+        <div class="form-group row">
+          <input type="button" class="form-control btn btn-success" value="登录" (click)="submit()">
+        </div>
+        <div class="form-group row">
+          <input type="button" class="form-control btn btn-danger" value="注册" (click)="hide()"
+                 [routerLink]="['register.html']">
+        </div>
+
+        <div class="form-group row">
+          <small class="col-12 text-right find-pass" [routerLink]="['findpass.html']" (click)="hide()">忘记密码了?</small>
+        </div>
+
+        <div class="row">
+          <small class="text-danger col-12 text-center" *ngIf="loginBox.usernameErr||loginBox.passwordErr">
+            {{loginBox.usernameErr}}{{loginBox.passwordErr}}
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

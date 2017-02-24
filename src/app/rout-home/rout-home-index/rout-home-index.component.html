@@ -1,0 +1,32 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-12">
+      <ol class="breadcrumb col-lg-12">
+        <li class="breadcrumb-item active">Home</li>
+      </ol>
+    </div>
+    <div class="col-sm-6 col-md-4  col-lg-3 col-xl-2 item " *ngFor="let item of items;let i = index">
+      <div class="card" [ngStyle]="{'animation-delay': 50*(i%loadCount)+'ms'}">
+        <a href="#p{{item.id}}" id="p{{item.id}}"></a>
+        <img class="card-img-top" src="assets/demo/{{item.imgSrc}}.jpeg" alt="Card image cap"
+             (click)="chooseItem()">
+        <div class="card-block">
+          <h4 class="card-title">{{item.title}}</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.{{item.content}}</p>
+        </div>
+        <div class="card-footer text-right text-muted">
+          {{ item.time | date:'HH:mm:ss' }}:{{i}}({{i%loadCount}})
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="alert col-12 text-center" role="alert">
+    <strong>Well done!</strong>
+    <button class="btn btn-danger" (click)="addItems()">add</button>
+    You successfully read this important alert message.
+  </div>
+</div>
+
+<app-pic-viewer-modal>
+</app-pic-viewer-modal>

@@ -1,0 +1,123 @@
+/* line 3, rout-index.component.scss */
+slide {
+  -moz-animation: slide-show 500ms ease-in;
+  -webkit-animation: slide-show 500ms ease-in;
+  animation: slide-show 500ms ease-in;
+  -moz-animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  cursor: pointer;
+}
+/* line 7, rout-index.component.scss */
+slide img {
+  height: 40rem;
+  width: 0px;
+  padding: 0;
+}
+/* line 12, rout-index.component.scss */
+slide .carousel-caption {
+  color: gray;
+}
+/* line 15, rout-index.component.scss */
+slide .carousel-control {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@-moz-keyframes slide-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 29, rout-index.component.scss */
+.index-item {
+  height: 25rem;
+  background-color: gray;
+  border: 1px solid black;
+  -moz-animation: item-show 300ms ease-in;
+  -webkit-animation: item-show 300ms ease-in;
+  animation: item-show 300ms ease-in;
+  -moz-animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  cursor: pointer;
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+/* line 38, rout-index.component.scss */
+.index-item:hover {
+  -moz-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  z-index: 100;
+}
+
+@-moz-keyframes item-show {
+  from {
+    opacity: 0;
+    -moz-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  to {
+    opacity: 1;
+    -moz-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes item-show {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@keyframes item-show {
+  from {
+    opacity: 0;
+    -moz-transform: scale(0.9, 0.9);
+    -ms-transform: scale(0.9, 0.9);
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  to {
+    opacity: 1;
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}

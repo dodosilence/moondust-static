@@ -1,0 +1,127 @@
+@import 'compass/css3';
+
+$width-side: 3rem;
+
+.navbar {
+  padding: 0.1rem 1rem;
+}
+
+.head-nav {
+  .navbar-brand-m {
+    display: inline-block;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+  }
+  .head-ico-nav {
+    width: 35px;
+  }
+}
+
+.nav-left {
+  width: $width-side+0.9;
+  .list-group {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    @include translateY(-50%);
+    .list-group-item {
+      cursor: pointer;
+      width: $width-side;
+      height: $width-side;
+      border-radius: 50%;
+      padding: 0;
+      border: none;
+      line-height: $width-side;
+      @include box-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+      &:first-child, &:last-child {
+        @include border-radius(50%);
+      }
+      &.active {
+        background-color: red;
+      }
+      .fa {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.nav-left-shadow {
+  width: 100%;
+  z-index: 1029;
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+
+.route {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  .head-nav{
+    @include opacity(0);
+  }
+}
+
+//--------------------animation
+.nav-left {
+  @include translateX(-$width-side);
+  @include transition(all 0.4s ease-out);
+  @include opacity(0);
+  &.show {
+    @include opacity(1);
+    @include translateX(0);
+    @include transition(all .4s ease-in);
+  }
+  .list-group {
+    .list-group-item {
+      @include transition(all 0.3s);
+      &:hover {
+        @include scale(1.15);
+        @include transition(all 0.3s);
+      }
+    }
+  }
+}
+
+.fixed-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1030;
+}
+
+.head-nav {
+  &.show {
+    @include opacity(0.9);
+    @include translateY(0);
+    @include transition(all 500ms ease-in);
+  }
+  &.hide {
+    @include opacity(0);
+    @include translateY(-100%);
+    @include transition(all 500ms ease-out);
+  }
+  .navbar-brand-m {
+    cursor: pointer;
+    .fa {
+      @include transition(all 300ms ease-out);
+    }
+    &:hover {
+      .fa {
+        @include rotate(90deg);
+        @include transition(all 300ms ease-in);
+      }
+    }
+  }
+}

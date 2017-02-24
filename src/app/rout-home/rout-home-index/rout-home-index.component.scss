@@ -1,0 +1,28 @@
+@import "compass/css3";
+
+.card {
+  @include animation(itemShow 800ms);
+  @include animation-fill-mode(backwards);
+  cursor: pointer;
+  @include transition(all 0.4s);
+  &:hover {
+    @include box-shadow(0 2px 8px 1px rgba(0, 0, 0, 0.4));
+    @include scale(1.01);
+    @include transition(all 0.4s);
+  }
+  .card-img-top {
+    width: 100%;
+  }
+}
+
+@include keyframes(itemShow) {
+  from {
+    @include opacity(0);
+    @include translateY(2rem);
+  }
+  to {
+    @include opacity(1);
+    @include translateY(0);
+  }
+}
+

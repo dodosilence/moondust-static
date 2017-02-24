@@ -1,0 +1,23 @@
+/* line 6, seach-box.component.scss */
+#searchDowm .search_box {
+  height: 30px;
+  -moz-border-radius: 0.11rem;
+  -webkit-border-radius: 0.11rem;
+  border-radius: 0.11rem;
+  width: 220px;
+}
+
+/* line 12, seach-box.component.scss */
+.search_box_result {
+  width: 220px;
+  padding: 0;
+}
+/* line 15, seach-box.component.scss */
+.search_box_result .dropdown-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0.4rem 0.75rem;
+}
+/* line 18, seach-box.component.scss */
+.search_box_result .dropdown-item:last-child {
+  border-bottom: none;
+}

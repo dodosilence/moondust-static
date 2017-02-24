@@ -1,0 +1,37 @@
+/* line 2, login-modal.component.scss */
+.login-body {
+  position: fixed;
+  z-index: 1030;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 10rem;
+  width: auto;
+  max-width: 22rem;
+}
+/* line 11, login-modal.component.scss */
+.login-body .container {
+  background-color: white;
+  box-shadow: 0 0 1rem 0.09rem rgba(0, 0, 0, 0.6);
+  border-radius: 0.2rem;
+  padding: 1rem 2rem;
+}
+/* line 16, login-modal.component.scss */
+.login-body .container .logo {
+  font-size: 3rem;
+}
+/* line 19, login-modal.component.scss */
+.login-body .container .find-pass {
+  cursor: pointer;
+}
+
+/* line 25, login-modal.component.scss */
+.login-modal-shadow {
+  position: fixed;
+  width: 100%;
+  z-index: 1029;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  cursor: pointer;
+}

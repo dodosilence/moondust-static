@@ -1,0 +1,22 @@
+@import "compass/css3";
+
+
+$width_seachbox:220px;
+#searchDowm {
+  .search_box {
+    height: 30px;
+    @include border-radius(0.11rem);
+    width: $width_seachbox;
+  }
+}
+.search_box_result {
+  width: $width_seachbox;
+  padding: 0;
+  .dropdown-item{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 0.4rem 0.75rem;
+    &:last-child{
+      border-bottom:none;
+    }
+  }
+}

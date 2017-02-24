@@ -1,0 +1,52 @@
+/* line 2, rout-home.component.scss */
+nav.nav a.nav-link {
+  padding: 0.2em 1em;
+}
+/* line 4, rout-home.component.scss */
+nav.nav a.nav-link.active {
+  border-bottom: 4px solid red;
+}
+
+/* line 10, rout-home.component.scss */
+.item {
+  padding: 0.4rem;
+}
+/* line 12, rout-home.component.scss */
+.item .item_content {
+  box-shadow: -1px 1px 1px 5px rgba(0, 0, 0, 0.2);
+  height: 200px;
+}
+
+/* line 18, rout-home.component.scss */
+.sub-nav-index {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+}
+/* line 24, rout-home.component.scss */
+.sub-nav-index .list-group {
+  background-color: transparent;
+}
+/* line 26, rout-home.component.scss */
+.sub-nav-index .list-group .list-group-item {
+  margin-top: 10px;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.1rem;
+  padding: 0;
+  border: none;
+  line-height: 3rem;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+}
+/* line 36, rout-home.component.scss */
+.sub-nav-index .list-group .list-group-item:hover {
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+}
+/* line 39, rout-home.component.scss */
+.sub-nav-index .list-group .list-group-item i {
+  width: 3rem;
+  text-align: center;
+}

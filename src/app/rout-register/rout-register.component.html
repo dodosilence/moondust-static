@@ -1,0 +1,58 @@
+<div class="register-body">
+  <div class="container">
+    <div class="col-12">
+      <div class="row">
+        <a class="col-12  text-center mb-4 logo">注册</a>
+      </div>
+      <div class="form-group row "
+           [ngClass]="{'has-danger': registerEntity.mobileErr,'has-success':registerEntity.mobileErr==null}">
+        <input type="text" class="form-control text-center "
+               [ngClass]="{'form-control-danger': registerEntity.mobileErr,'form-control-success':registerEntity.mobileErr==null}"
+               (keyup)="registerEntity.validateMobile()"
+               [(ngModel)]="registerEntity.mobile"
+               placeholder="手机号">
+      </div>
+      <div class="form-group row">
+        <div class="input-group">
+          <input type="text" class="form-control text-center" placeholder="验证码" [(ngModel)]="registerEntity.vcode"
+                 (keyup)="registerEntity.validateVcode()">
+          <span class="input-group-btn">
+              <button class="btn btn-danger " type="button" *ngIf="time==0" (click)="sendVcode()"
+                      [disabled]="registerEntity.mobileErr!=null">发送验证码</button>
+              <button class="btn btn-danger " type="button" disabled *ngIf="time>0">{{time}}秒再次发送</button>
+          </span>
+        </div>
+      </div>
+
+      <div *ngIf="registerEntity.mobileErr==null&&registerEntity.vcodeErr==null">
+        <div class="form-group row "
+             [ngClass]="{'has-danger': registerEntity.passErr,'has-success':registerEntity.passErr==null}">
+          <input type="password" class="form-control text-center "
+                 [ngClass]="{'form-control-danger': registerEntity.passErr,'form-control-success':registerEntity.passErr==null}"
+                 (keyup)="registerEntity.validatePass()"
+                 [(ngModel)]="registerEntity.pass"
+                 placeholder="密码">
+        </div>
+
+        <div class="form-group row "
+             [ngClass]="{'has-danger': registerEntity.passCErr,'has-success':registerEntity.passCErr==null}">
+          <input type="password" class="form-control text-center"
+                 [ngClass]="{'form-control-danger': registerEntity.passCErr,'form-control-success':registerEntity.passCErr==null}"
+                 (keyup)="registerEntity.validatePassC()"
+                 [(ngModel)]="registerEntity.passC"
+                 placeholder="确认密码">
+        </div>
+      </div>
+      <div class="form-group row">
+        <input type="button" class="form-control btn btn-success" value="注册"
+               [ngClass]="{'disabled': registerEntity.vcodeErr!=null||registerEntity.mobileErr!=null||registerEntity.passCErr!=null||registerEntity.passErr!=null}"
+               (click)="submit()">
+      </div>
+      <div class="row">
+        <small class="text-danger col-12 text-center">
+          {{registerEntity.getErrorMsg(1)}}
+        </small>
+      </div>
+    </div>
+  </div>
+</div>

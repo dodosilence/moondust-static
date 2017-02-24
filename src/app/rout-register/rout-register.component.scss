@@ -1,0 +1,22 @@
+.register-body {
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 10rem;
+  width: auto;
+  max-width: 22rem;
+  .container {
+    background-color: white;
+    box-shadow: 0 0 1rem 0.05rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.2rem;
+    padding: 1rem 2rem;
+    .logo {
+      font-size: 3rem;
+    }
+    .find-pass {
+      cursor: pointer;
+    }
+  }
+}
+

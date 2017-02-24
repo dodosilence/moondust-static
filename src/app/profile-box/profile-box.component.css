@@ -1,0 +1,14 @@
+/* line 2, profile-box.component.scss */
+.head-ico {
+  padding: 0;
+}
+/* line 4, profile-box.component.scss */
+.head-ico img {
+  cursor: pointer;
+}
+/* line 6, profile-box.component.scss */
+.head-ico img:hover {
+  -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,54 @@
+@import "compass/css3";
+
+slide {
+  @include animation(slide-show 500ms ease-in);
+  @include animation-fill-mode(backwards);
+  cursor: pointer;
+  img {
+    height: 40rem;
+    width: 0px;
+    padding: 0;
+  }
+  .carousel-caption {
+    color: gray;
+  }
+  .carousel-control {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@include keyframes(slide-show) {
+  from {
+    @include opacity(0);
+  }
+  to {
+    @include opacity(1);
+  }
+}
+
+.index-item {
+  height: 25rem;
+  background-color: gray;
+  border: 1px solid black;
+  @include animation(item-show 300ms ease-in);
+  @include animation-fill-mode(backwards);
+  cursor: pointer;
+  @include scale(1);
+  @include transition(all 500ms);
+  &:hover {
+    @include scale(1.05);
+    @include transition(all 500ms);
+    z-index: 100;
+  }
+}
+
+@include keyframes(item-show) {
+  from {
+    @include opacity(0);
+    @include scale(0.9);
+  }
+  to {
+    @include opacity(1);
+    @include scale(1);
+  }
+}

@@ -1,0 +1,29 @@
+@-moz-keyframes amt-show-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes amt-show-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes amt-show-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 2, style.scss */
+button {
+  outline: none;
+  cursor: pointer;
+}
